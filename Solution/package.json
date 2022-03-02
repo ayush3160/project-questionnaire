@@ -1,0 +1,68 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": "Ujjawal Shrivastava <ujjawalshrivastava19@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "start": "cross-env PORT=5000 NODE_ENV=development BABEL_ENV=development webpack-dev-server --hot --mode development --host 0.0.0.0",
+    "test": "jest --env=jsdom --testResultsProcessor=\"jest-junit\"",
+    "build": "webpack --mode production"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/src/tests/styleMock.js"
+    }
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": ".",
+    "outputName": "xunittest-report.xml",
+    "uniqueOutputName": "false",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.1.3",
+    "json-server": "^0.17.0",
+    "msw": "^0.38.1",
+    "node-fetch": "^3.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime-corejs3": "^7.16.8",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.20.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
+    "ejs-loader": "^0.5.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
+    "jest-junit": "^13.0.0",
+    "prettier": "^2.5.1",
+    "style-loader": "^3.3.1",
+    "svg-url-loader": "^7.1.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
