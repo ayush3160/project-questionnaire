@@ -8,6 +8,8 @@ export default function Quiz() {
 
   const [test, setTest] = useState([]);
 
+  const [loaded,setLoaded] = useState(false)
+
   const [question, setQuestion] = useState(0);
 
   const [disabled, setDisabled] = useState(true);
@@ -33,6 +35,7 @@ export default function Quiz() {
           }
         });
         setTest(result);
+        setLoaded(true);
       }).catch((err) => {
         console.log(err)
       })
@@ -63,7 +66,7 @@ export default function Quiz() {
     setQuestion(question+1)
   }
 
-  if (question == test.length) {
+  if (question == test.length && loaded) {
     return (
       <>
         <h1>Thanks For attempting the test</h1>

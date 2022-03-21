@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-// const fetch = (...args) =>
-//   import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
 
 export default function Home() {
   const [questions, setQuestions] = useState([]);

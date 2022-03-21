@@ -4,11 +4,6 @@
             "id" : 1,
             "title" : "Question Bank - 1",
             "questions" : 6
-        },
-        {
-            "id" : 2,
-            "title" : "Question Bank - 2",
-            "questions" : 5
         }
     ],
     "questions" : [

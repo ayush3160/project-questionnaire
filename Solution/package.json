@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "author": "Ujjawal Shrivastava <ujjawalshrivastava19@gmail.com>",
+  "author": "Ayush Sharma <ayushsharma3160@gmail.com>",
   "license": "ISC",
   "scripts": {
-    "start": "cross-env PORT=5000 NODE_ENV=development BABEL_ENV=development webpack-dev-server --hot --mode development --host 0.0.0.0",
+    "dev": "cross-env PORT=5000 NODE_ENV=development BABEL_ENV=development webpack-dev-server --hot --mode development --host 0.0.0.0",
     "test": "jest --env=jsdom --testResultsProcessor=\"jest-junit\"",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "json-server" : "cd src/api && json-server --watch db.json",
+    "start": "concurrently \"npm run json-server\" \"npm run dev\""
   },
   "jest": {
     "moduleNameMapper": {
